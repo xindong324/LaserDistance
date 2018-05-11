@@ -143,13 +143,7 @@ void vl53l0x_general_start(VL53L0X_Dev_t *dev,u8 mode)
 //	LCD_ShowString(30,140+90,200,16,16,"Distance:    0 mm");//显示测量距离 
 	while(1)
 	{
-		 key = KEY_Scan(0);
-		 if(key == WKUP_PRES)
-		 {
-			 LED1=1;
-			 break;//返回上一菜单
-			 
-		 }
+
 		 if(Status==VL53L0X_ERROR_NONE)
 		 {
 				Status = vl53l0x_start_single_test(dev,&vl53l0x_data,buf);//执行一次测量
@@ -193,14 +187,14 @@ void vl53l0x_general_test(VL53L0X_Dev_t *dev)
 	u8 mode=0;
 	LED1=1;
 	//general_ui();//显示普通测量模式UI
-	
-	while(1)
+	vl53l0x_general_start(dev,2);
+	while(0)
 	{	
 
-		key = KEY_Scan(0);
-		
-		if(key==WKUP_PRES)	break;//返回主菜单 	
+
 		vl53l0x_general_start(dev,2);
+		
+		
 //		else if(key==KEY1_PRES)//选择工作模式
 //		{
 //             mode++;

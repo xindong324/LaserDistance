@@ -3,9 +3,9 @@
 <title>Static Call Graph - [..\OBJ\VL53L0X.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\VL53L0X.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Fri May 11 11:43:00 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060020: Last Updated: Fri May 11 12:13:56 2018
 <BR><P>
-<H3>Maximum Stack Usage =        688 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        672 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; vl53l0x_test &rArr; vl53l0x_general_test &rArr; vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 <P>
@@ -302,7 +302,7 @@ Global Symbols
 <P><STRONG><a name="[1f2]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[81]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; vl53l0x_test &rArr; vl53l0x_general_test &rArr; vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -326,7 +326,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
 <LI>Call Chain = main &rArr; vl53l0x_test &rArr; vl53l0x_general_test &rArr; vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_test
@@ -657,16 +657,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>KEY_Scan</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, key.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = KEY_Scan &rArr; delay_ms
-</UL>
-<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<P><STRONG><a name="[bc]"></a>KEY_Scan</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, key.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_interrupt_test
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_interrupt_start
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_start
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_test
 </UL>
 
 <P><STRONG><a name="[be]"></a>IIC_Init</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, myiic.o(.text))
@@ -853,7 +849,6 @@ Global Symbols
 <LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_interrupt_start
 <LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_start
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_set_mode
-<LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_test
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_init
 <LI><a href="#[191]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_reset
 </UL>
@@ -1177,7 +1172,7 @@ Global Symbols
 
 <P><STRONG><a name="[1fa]"></a>GPIO_PinLockConfig</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[bd]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text))
+<P><STRONG><a name="[bd]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
 </UL>
 
@@ -3290,7 +3285,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8f]"></a>vl53l0x_test</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, vl53l0x.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
 <LI>Call Chain = vl53l0x_test &rArr; vl53l0x_general_test &rArr; vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
@@ -3354,12 +3349,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_start
 </UL>
 
-<P><STRONG><a name="[198]"></a>vl53l0x_general_start</STRONG> (Thumb, 150 bytes, Stack size 32 bytes, vl53l0x_gen.o(.text))
+<P><STRONG><a name="[198]"></a>vl53l0x_general_start</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, vl53l0x_gen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
 <LI>Call Chain = vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_start_single_test
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_set_mode
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mode_string
@@ -3373,13 +3367,11 @@ Global Symbols
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 </UL>
 
-<P><STRONG><a name="[194]"></a>vl53l0x_general_test</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, vl53l0x_gen.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 688 + Unknown Stack Size
+<P><STRONG><a name="[194]"></a>vl53l0x_general_test</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, vl53l0x_gen.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 672 + Unknown Stack Size
 <LI>Call Chain = vl53l0x_general_test &rArr; vl53l0x_general_start &rArr; vl53l0x_set_mode &rArr; VL53L0X_StaticInit &rArr; VL53L0X_perform_ref_spad_management &rArr; perform_ref_signal_measurement &rArr; VL53L0X_PerformSingleRangingMeasurement &rArr; VL53L0X_GetRangingMeasurementData &rArr; VL53L0X_get_pal_range_status &rArr; VL53L0X_GetLimitCheckValue &rArr; VL53L0X_RdWord &rArr; VL53L0X_read_word &rArr; VL53L0X_read_multi &rArr; VL_IIC_Read_nByte &rArr; VL_IIC_Read_Byte &rArr; VL_IIC_NAck
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_start
+<BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_general_start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vl53l0x_test
 </UL>
